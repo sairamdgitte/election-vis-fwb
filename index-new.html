@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>D3.js Toggle Chart Example</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        h2 {
+            background-image: linear-gradient(to right, #5E5AA8, #FF5F6D);
+            /* Gradient background */
+            -webkit-background-clip: text;
+            /* Apply the background to the text */
+            -webkit-text-fill-color: transparent;
+            /* Make the text transparent */
+            font-family: 'Helvetica Neue', sans-serif;
+            /* Font family */
+            font-size: 2.5em;
+            /* Font size */
+            text-align: center;
+            /* Center align the text */
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #toggle {
+            position: absolute;
+            top: 25%;
+            left: 49%;
+            transform: translateX(-50%);
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+            z-index: 1;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #chart1,
+        #chart2 {
+            display: flex;
+            /* margin-top: 10px;
+            margin-left: 20px;
+            margin-right: 10px; */
+            /* opacity: 1; */
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #chart1 {
+            margin-left: 2%;
+        }
+
+        #chart2 {
+
+            margin-left: 8%;
+        }
+
+        #chart1Container,
+        #chart2Container {
+            width: 600px;
+            height: 560px;
+        }
+
+        #chart1Background {
+            position: flex;
+            margin-bottom: 30px;
+            margin-right: 16%;
+        }
+
+
+        #chart1Background::before {
+            content: "";
+            /* background-image: url('assets/scott.png'); */
+            background-size: cover;
+            opacity: 0.9;
+            position: absolute;
+            top: 15%;
+            left: 7%;
+            width: 100%;
+            height: 77%;
+            z-index: -1;
+            /* transform: rotate(0deg); */
+            transform-origin: center center;
+        }
+
+        #chart1Container {
+            position: relative;
+            z-index: 1;
+            margin-left: 10px;
+        }
+
+        #chart2Background {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+
+        #chart2Background::before {
+            content: "";
+            /* background-image: url('assets/labor.png'); */
+            background-size: contain;
+            opacity: 0.5;
+            position: absolute;
+            top: 20%;
+            left: 7%;
+            width: 100%;
+            height: 77%;
+            z-index: -1;
+            transform: rotate(90deg);
+            transform-origin: center center;
+        }
+
+        #chart2Container {
+            position: relative;
+            z-index: 1;
+            margin-right: 10px;
+        }
+
+        .container-fluid {
+            margin-top: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 2px;
+        }
+
+        .bar {
+            fill: #5E5AA8;
+        }
+
+        .x-axis,
+        .y-axis {
+            transform: rotate(360deg);
+            transform-origin: center center;
+        }
+
+
+        .bubble {
+
+            fill: #FF5F6D;
+            opacity: 0.8;
+            stroke: #fff;
+            stroke-width: 2px;
+            margin-top: 100%;
+            transform: rotate(360deg);
+            transform-origin: center center;
+        }
+
+        .bubble-label {
+            font-size: 12px;
+            text-anchor: middle;
+            fill: white;
+            transform: rotate(360deg);
+            transform-origin: center center;
+        }
+
+        .bar-label {
+            /* font-size: 12px; */
+            /* text-anchor: middle; */
+            /* fill: white; */
+            transform: rotate(360deg);
+            transform-origin: center center;
+        }
+        .topic-label {
+            transform: rotate(360deg);
+            transform-origin: center center;
+        }
+
+        .tooltip {
+            position: absolute;
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px;
+            font-size: 12px;
+            visibility: hidden;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        /* Adding font transition */
+
+
+        #chart1Background,
+        #chart2Background {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 200px;
+            font-weight: bold;
+            overflow: hidden;
+            z-index: -1;
+
+
+        }
+
+        .rolling-digit {
+            display: inline-block;
+            transform: translateY(-100%);
+            opacity: 0;
+            animation: roll-in 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes roll-in {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Media articles published during previous two elections</h2>
+    <div id="toggle">Toggle chart</div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5" id="chart1Background" width="500" height="800">
+                <div id="chart1Container">
+                    <div>
+                        <svg id="chart1" class="chart" width="500" height="1600"></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5" id="chart2Background" width="500" height="800">
+                <div id="chart2Container">
+                    <div>
+                        <svg id="chart2" class="chart" width="500" height="1600"></svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="election.js"></script>
+</body>
+
+</html>
