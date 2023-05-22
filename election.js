@@ -78,28 +78,25 @@ function createBubbleChart(bubbleData, chartName) {
 }
 
 const data2019 = [
-    { date: new Date("2021-01-01"), value: 10, label: 'Topic 1' },
-    { date: new Date("2021-02-01"), value: 20, label: 'Topic 1' },
-    { date: new Date("2021-03-01"), value: 15, label: 'Topic 1' },
-    { date: new Date("2021-04-01"), value: 25, label: 'Topic 1' },
-    { date: new Date("2021-05-01"), value: 30, label: 'Topic 1' },
-    { date: new Date("2021-06-01"), value: 20, label: 'Topic 1' },
-    { date: new Date("2021-07-01"), value: 35, label: 'Topic 1' },
-    { date: new Date("2021-08-01"), value: 25, label: 'Topic 1' },
-    { date: new Date("2021-09-01"), value: 40, label: 'Topic 1' },
-    { date: new Date("2021-10-01"), value: 30, label: 'Topic 1' }
+
+    { date: new Date("2021-03-01"), value: 825, label: "B"}, //Billionaires
+    { date: new Date("2021-04-01"), value: 442, label: "CL"}, //Criminal law
+    { date: new Date("2021-05-01"), value: 373, label: "Super"}, //Superannuation
+    { date: new Date("2021-06-01"), value: 301, label: "PS"}, // Public Statements
+    { date: new Date("2021-07-01"), value: 257, label: "SSGB"}, //Social security and government benefits
+    { date: new Date("2021-08-01"), value: 244, label: "LI"}, //Life insurance
+    { date: new Date("2021-09-01"), value: 233, label: "F&C"}, //Food and cooking
+    { date: new Date("2021-10-01"), value: 190, label: "PM"} //Property market
 ];
 const data2022 = [
-    { date: new Date("2021-01-01"), value: 10, label: 'Topic 1' },
-    { date: new Date("2021-02-01"), value: 20, label: 'Topic 1' },
-    { date: new Date("2021-03-01"), value: 15, label: 'Topic 1' },
-    { date: new Date("2021-04-01"), value: 25, label: 'Topic 1' },
-    { date: new Date("2021-05-01"), value: 30, label: 'Topic 1' },
-    { date: new Date("2021-06-01"), value: 20, label: 'Topic 1' },
-    { date: new Date("2021-07-01"), value: 35, label: 'Topic 1' },
-    { date: new Date("2021-08-01"), value: 25, label: 'Topic 1' },
-    { date: new Date("2021-09-01"), value: 40, label: 'Topic 1' },
-    { date: new Date("2021-10-01"), value: 30, label: 'Topic 1' }
+    {date: new Date("2021-03-01"), value: 583, label: "B"},
+ {date: new Date("2021-04-01"), value: 583, label: "CL"},
+ {date: new Date("2021-05-01"), value: 560, label: "PS"},
+ {date: new Date("2021-06-01"), value: 386, label: "LI"},
+ {date: new Date("2021-07-01"), value: 342, label: "E&T"},
+ {date: new Date("2021-08-01"), value: 319, label: "Super"},
+ {date: new Date("2021-09-01"), value: 313, label: "F&C"},
+ {date: new Date("2021-010-01"), value: 237, label: "PM"}
 ];
 const margin = { top: 20, right: 20, bottom: 30, left: 50 };
 const width = 500 - margin.left - margin.right;
@@ -152,6 +149,7 @@ function updateChart(type) {
         // Remove all the previous charts
         svg1.selectAll(".bar").remove();
         svg1.selectAll(".bar-label").remove();
+        svg1.selectAll(".topic-label").remove();
         svg1.selectAll(".x-axis").remove();
         svg1.selectAll(".y-axis").remove();
 
@@ -178,21 +176,21 @@ function updateChart(type) {
             .data(data2019)
             .join("rect")
             .attr("class", "bar")
-            .attr("x", d => x2019(d.date) - 95)
-
+            .attr("x", d => x2019(d.date))
             .attr("width", width / data2019.length)
             .attr("height", 0)
             .transition()
             .duration(1000)
             .attr("y", d => y2019(d.value) + 150)
-            .attr("height", d => height - y2019(d.value))
+            .attr("height", d => height - y2019(d.value));
+
 
         svg3.selectAll(".bar-label")
             .data(data2019)
             .join("text")
             .attr("class", "bar-label")
-            .text(d => d.label)
-            .attr("x", d => x2019(d.date) + width / (2 * data2019.length) - 95)
+            .text(d => d.value)
+            .attr("x", d => x2019(d.date) + 25)
             .attr("y", d => y2019(d.value) + 140)
             .attr("text-anchor", "middle")
             .attr("font-size", "0px")
@@ -200,6 +198,21 @@ function updateChart(type) {
             .duration(2000)
             .attr("font-size", "12px")
             .attr("fill", "black");
+
+        svg3.selectAll(".topic-label")
+            .data(data2019)
+            .join("text")
+            .attr("class", "topic-label")
+            .text(d => d.label)
+            .attr("x", d => x2019(d.date) + 25)
+            .attr("y", d => 420)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "0px")
+            .transition()
+            .duration(2000)
+            .attr("font-size", "12px")
+            .attr("fill", "black");
+
 
         const svg4 = d3.select("#chart2")
         svg4.selectAll(".bubble").remove();
@@ -211,7 +224,7 @@ function updateChart(type) {
             .data(data2022)
             .join("rect")
             .attr("class", "bar")
-            .attr("x", d => x2022(d.date) - 95)
+            .attr("x", d => x2022(d.date))
             .attr("width", width / data2022.length)
             .attr("height", 0)
             .transition()
@@ -224,7 +237,7 @@ function updateChart(type) {
             .join("text")
             .attr("class", "bar-label")
             .text(d => d.value)
-            .attr("x", d => x2022(d.date) + width / (2 * data2022.length) - 95)
+            .attr("x", d => x2022(d.date) + 25)
             .attr("y", d => y2022(d.value) + 140)
             .attr("text-anchor", "middle")
             .attr("font-size", "0px")
@@ -232,12 +245,13 @@ function updateChart(type) {
             .duration(2000)
             .attr("font-size", "12px")
             .attr("fill", "black");
+
         svg4.selectAll(".topic-label")
             .data(data2022)
             .join("text")
             .attr("class", "topic-label")
             .text(d => d.label)
-            .attr("x", d => x2022(d.date) + width / (2 * data2022.length) - 95)
+            .attr("x", d => x2022(d.date) + 25)
             .attr("y", d => 420)
             .attr("text-anchor", "middle")
             .attr("font-size", "0px")

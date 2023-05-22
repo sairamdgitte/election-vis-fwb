@@ -1,50 +1,242 @@
 [
-    { "word": "apple", "frequency": 53 },
-    { "word": "banana", "frequency": 27 },
-    { "word": "cherry", "frequency": 7 },
-    { "word": "date", "frequency": 4 },
-    { "word": "elderberry", "frequency": 1 },
-    { "word": "fig", "frequency": 3 },
-    { "word": "grape", "frequency": 10 },
-    { "word": "honeydew", "frequency": 2 },
-    { "word": "kiwi", "frequency": 8 },
-    { "word": "lemon", "frequency": 14 },
-    { "word": "mango", "frequency": 9 },
-    { "word": "nectarine", "frequency": 3 },
-    { "word": "orange", "frequency": 17 },
-    { "word": "pear", "frequency": 11 },
-    { "word": "quince", "frequency": 2 },
-    { "word": "raspberry", "frequency": 6 },
-    { "word": "strawberry", "frequency": 12 },
-    { "word": "tangerine", "frequency": 5 },
-    { "word": "watermelon", "frequency": 4 },
-    { "word": "apricot", "frequency": 2 },
-    { "word": "blueberry", "frequency": 8 },
-    { "word": "coconut", "frequency": 3 },
-    { "word": "dragonfruit", "frequency": 1 },
-    { "word": "elderflower", "frequency": 1 },
-    { "word": "figs", "frequency": 1 },
-    { "word": "grapefruit", "frequency": 6 },
-    { "word": "huckleberry", "frequency": 2 },
-    { "word": "jackfruit", "frequency": 1 },
-    { "word": "kiwifruit", "frequency": 1 },
-    { "word": "lemonade", "frequency": 3 },
-    { "word": "mandarin", "frequency": 4 },
-    { "word": "nectar", "frequency": 1 },
-    { "word": "peach", "frequency": 9 },
-    { "word": "raspberries", "frequency": 3 },
-    { "word": "strawberries", "frequency": 6 },
-    { "word": "tangerines", "frequency": 2 },
-    { "word": "watermelons", "frequency": 2 },
-    { "word": "avocado", "frequency": 5 },
-    { "word": "blackberry", "frequency": 7 },
-    { "word": "cantaloupe", "frequency": 3 },
-    { "word": "date fruit", "frequency": 1 },
-    { "word": "elderberries", "frequency": 1 },
-    { "word": "fig jam", "frequency": 1 },
-    { "word": "grapes", "frequency": 4 },
-    { "word": "honey", "frequency": 6 },
-    { "word": "juice", "frequency": 4 },
-    { "word": "kiwis", "frequency": 1 },
-    { "word": "lime", "frequency": 5 },
-    { "word": "mangoes", "frequency": 1 } ]
+    {
+        "word": "said",
+        "frequency": 16608
+    },
+    {
+        "word": "year",
+        "frequency": 14500
+    },
+    {
+        "word": "cent",
+        "frequency": 12152
+    },
+    {
+        "word": "home",
+        "frequency": 11402
+    },
+    {
+        "word": "servic",
+        "frequency": 10913
+    },
+    {
+        "word": "fund",
+        "frequency": 9979
+    },
+    {
+        "word": "would",
+        "frequency": 9320
+    },
+    {
+        "word": "retir",
+        "frequency": 8825
+    },
+    {
+        "word": "rate",
+        "frequency": 8499
+    },
+    {
+        "word": "invest",
+        "frequency": 8484
+    },
+    {
+        "word": "bank",
+        "frequency": 8425
+    },
+    {
+        "word": "super",
+        "frequency": 8408
+    },
+    {
+        "word": "financi",
+        "frequency": 8222
+    },
+    {
+        "word": "properti",
+        "frequency": 7260
+    },
+    {
+        "word": "pension",
+        "frequency": 7079
+    },
+    {
+        "word": "peopl",
+        "frequency": 6954
+    },
+    {
+        "word": "time",
+        "frequency": 6627
+    },
+    {
+        "word": "loan",
+        "frequency": 6601
+    },
+    {
+        "word": "also",
+        "frequency": 6204
+    },
+    {
+        "word": "make",
+        "frequency": 6178
+    },
+    {
+        "word": "incom",
+        "frequency": 6013
+    },
+    {
+        "word": "market",
+        "frequency": 5943
+    },
+    {
+        "word": "australian",
+        "frequency": 5934
+    },
+    {
+        "word": "govern",
+        "frequency": 5911
+    },
+    {
+        "word": "need",
+        "frequency": 5732
+    },
+    {
+        "word": "superannu",
+        "frequency": 5348
+    },
+    {
+        "word": "interest",
+        "frequency": 5268
+    },
+    {
+        "word": "australia",
+        "frequency": 5182
+    },
+    {
+        "word": "money",
+        "frequency": 5177
+    },
+    {
+        "word": "work",
+        "frequency": 5155
+    },
+    {
+        "word": "price",
+        "frequency": 5086
+    },
+    {
+        "word": "cost",
+        "frequency": 5023
+    },
+    {
+        "word": "save",
+        "frequency": 4995
+    },
+    {
+        "word": "say",
+        "frequency": 4935
+    },
+    {
+        "word": "could",
+        "frequency": 4932
+    },
+    {
+        "word": "mortgag",
+        "frequency": 4714
+    },
+    {
+        "word": "includ",
+        "frequency": 4660
+    },
+    {
+        "word": "hous",
+        "frequency": 4600
+    },
+    {
+        "word": "like",
+        "frequency": 4557
+    },
+    {
+        "word": "busi",
+        "frequency": 4445
+    },
+    {
+        "word": "million",
+        "frequency": 4368
+    },
+    {
+        "word": "manag",
+        "frequency": 4341
+    },
+    {
+        "word": "first",
+        "frequency": 4276
+    },
+    {
+        "word": "provid",
+        "frequency": 4147
+    },
+    {
+        "word": "plan",
+        "frequency": 4114
+    },
+    {
+        "word": "chang",
+        "frequency": 4076
+    },
+    {
+        "word": "account",
+        "frequency": 3837
+    },
+    {
+        "word": "take",
+        "frequency": 3820
+    },
+    {
+        "word": "live",
+        "frequency": 3746
+    },
+    {
+        "word": "increas",
+        "frequency": 3737
+    },
+    {
+        "word": "mani",
+        "frequency": 3690
+    },
+    {
+        "word": "asset",
+        "frequency": 3592
+    },
+    {
+        "word": "buyer",
+        "frequency": 3435
+    },
+    {
+        "word": "educ",
+        "frequency": 3401
+    },
+    {
+        "word": "industri",
+        "frequency": 3353
+    },
+    {
+        "word": "share",
+        "frequency": 3351
+    },
+    {
+        "word": "month",
+        "frequency": 3327
+    },
+    {
+        "word": "relat",
+        "frequency": 3296
+    },
+    {
+        "word": "want",
+        "frequency": 3288
+    },
+    {
+        "word": "report",
+        "frequency": 3263
+    }
+]

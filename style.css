@@ -25,6 +25,25 @@
             margin-bottom: 20px;
         }
 
+        h3 {
+            background-image: linear-gradient(to right, #5E5AA8, #FF5F6D);
+            /* Gradient background */
+            -webkit-background-clip: text;
+            /* Apply the background to the text */
+            -webkit-text-fill-color: transparent;
+            /* Make the text transparent */
+            font-family: 'Helvetica Neue', sans-serif;
+            /* Font family */
+            font-size: 1.5em;
+            /* Font size */
+            text-align: center;
+            /* Center align the text */
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
         #toggle {
             position: absolute;
             top: 25%;
@@ -168,6 +187,7 @@
             transform: rotate(360deg);
             transform-origin: center center;
         }
+
 
         .tooltip {
             position: absolute;
