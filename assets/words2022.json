@@ -1,1 +1,242 @@
-[{"word": "year", "frequency": 18403}, {"word": "cent", "frequency": 15859}, {"word": "rate", "frequency": 13055}, {"word": "said", "frequency": 12952}, {"word": "super", "frequency": 12772}, {"word": "fund", "frequency": 12598}, {"word": "invest", "frequency": 11414}, {"word": "home", "frequency": 10512}, {"word": "would", "frequency": 10306}, {"word": "financi", "frequency": 9084}, {"word": "say", "frequency": 8558}, {"word": "price", "frequency": 8321}, {"word": "market", "frequency": 7732}, {"word": "retir", "frequency": 7651}, {"word": "time", "frequency": 7448}, {"word": "pension", "frequency": 7305}, {"word": "incom", "frequency": 7078}, {"word": "also", "frequency": 6809}, {"word": "make", "frequency": 6634}, {"word": "interest", "frequency": 6620}, {"word": "superannu", "frequency": 6527}, {"word": "servic", "frequency": 6502}, {"word": "properti", "frequency": 6474}, {"word": "need", "frequency": 6425}, {"word": "cost", "frequency": 6419}, {"word": "peopl", "frequency": 6333}, {"word": "australian", "frequency": 6136}, {"word": "govern", "frequency": 6012}, {"word": "increas", "frequency": 5935}, {"word": "money", "frequency": 5794}, {"word": "work", "frequency": 5779}, {"word": "bank", "frequency": 5610}, {"word": "hous", "frequency": 5571}, {"word": "could", "frequency": 5552}, {"word": "rise", "frequency": 5500}, {"word": "save", "frequency": 5387}, {"word": "asset", "frequency": 5083}, {"word": "like", "frequency": 5078}, {"word": "australia", "frequency": 5019}, {"word": "month", "frequency": 4945}, {"word": "loan", "frequency": 4890}, {"word": "first", "frequency": 4818}, {"word": "mortgag", "frequency": 4682}, {"word": "investor", "frequency": 4463}, {"word": "includ", "frequency": 4380}, {"word": "account", "frequency": 4184}, {"word": "million", "frequency": 4161}, {"word": "take", "frequency": 4152}, {"word": "provid", "frequency": 4133}, {"word": "share", "frequency": 4076}, {"word": "manag", "frequency": 4021}, {"word": "mani", "frequency": 3963}, {"word": "return", "frequency": 3919}, {"word": "contribut", "frequency": 3876}, {"word": "help", "frequency": 3826}, {"word": "live", "frequency": 3703}, {"word": "plan", "frequency": 3637}, {"word": "start", "frequency": 3540}, {"word": "last", "frequency": 3514}, {"word": "much", "frequency": 3463}]
+[
+    {
+        "word": "year",
+        "frequency": 34715
+    },
+    {
+        "word": "cent",
+        "frequency": 29763
+    },
+    {
+        "word": "super",
+        "frequency": 28387
+    },
+    {
+        "word": "fund",
+        "frequency": 28095
+    },
+    {
+        "word": "said",
+        "frequency": 24910
+    },
+    {
+        "word": "invest",
+        "frequency": 23789
+    },
+    {
+        "word": "servic",
+        "frequency": 21934
+    },
+    {
+        "word": "rate",
+        "frequency": 20250
+    },
+    {
+        "word": "home",
+        "frequency": 20002
+    },
+    {
+        "word": "financi",
+        "frequency": 19148
+    },
+    {
+        "word": "would",
+        "frequency": 19125
+    },
+    {
+        "word": "retir",
+        "frequency": 17647
+    },
+    {
+        "word": "say",
+        "frequency": 16551
+    },
+    {
+        "word": "superannu",
+        "frequency": 14572
+    },
+    {
+        "word": "time",
+        "frequency": 14083
+    },
+    {
+        "word": "pension",
+        "frequency": 14002
+    },
+    {
+        "word": "market",
+        "frequency": 13932
+    },
+    {
+        "word": "incom",
+        "frequency": 13922
+    },
+    {
+        "word": "price",
+        "frequency": 13645
+    },
+    {
+        "word": "properti",
+        "frequency": 13529
+    },
+    {
+        "word": "make",
+        "frequency": 13399
+    },
+    {
+        "word": "also",
+        "frequency": 13192
+    },
+    {
+        "word": "peopl",
+        "frequency": 13112
+    },
+    {
+        "word": "govern",
+        "frequency": 12673
+    },
+    {
+        "word": "australian",
+        "frequency": 12400
+    },
+    {
+        "word": "need",
+        "frequency": 12033
+    },
+    {
+        "word": "interest",
+        "frequency": 11654
+    },
+    {
+        "word": "money",
+        "frequency": 11482
+    },
+    {
+        "word": "work",
+        "frequency": 11133
+    },
+    {
+        "word": "increas",
+        "frequency": 11098
+    },
+    {
+        "word": "cost",
+        "frequency": 11002
+    },
+    {
+        "word": "could",
+        "frequency": 10920
+    },
+    {
+        "word": "australia",
+        "frequency": 10899
+    },
+    {
+        "word": "save",
+        "frequency": 10664
+    },
+    {
+        "word": "bank",
+        "frequency": 10370
+    },
+    {
+        "word": "loan",
+        "frequency": 9896
+    },
+    {
+        "word": "includ",
+        "frequency": 9827
+    },
+    {
+        "word": "asset",
+        "frequency": 9729
+    },
+    {
+        "word": "provid",
+        "frequency": 9645
+    },
+    {
+        "word": "like",
+        "frequency": 9415
+    },
+    {
+        "word": "hous",
+        "frequency": 9319
+    },
+    {
+        "word": "first",
+        "frequency": 9239
+    },
+    {
+        "word": "manag",
+        "frequency": 9042
+    },
+    {
+        "word": "month",
+        "frequency": 8852
+    },
+    {
+        "word": "account",
+        "frequency": 8676
+    },
+    {
+        "word": "rise",
+        "frequency": 8594
+    },
+    {
+        "word": "contribut",
+        "frequency": 8494
+    },
+    {
+        "word": "mortgag",
+        "frequency": 8461
+    },
+    {
+        "word": "million",
+        "frequency": 8256
+    },
+    {
+        "word": "investor",
+        "frequency": 8140
+    },
+    {
+        "word": "take",
+        "frequency": 8046
+    },
+    {
+        "word": "share",
+        "frequency": 7815
+    },
+    {
+        "word": "busi",
+        "frequency": 7609
+    },
+    {
+        "word": "mani",
+        "frequency": 7609
+    },
+    {
+        "word": "return",
+        "frequency": 7514
+    },
+    {
+        "word": "plan",
+        "frequency": 7243
+    },
+    {
+        "word": "relat",
+        "frequency": 6984
+    },
+    {
+        "word": "person",
+        "frequency": 6871
+    },
+    {
+        "word": "last",
+        "frequency": 6841
+    },
+    {
+        "word": "member",
+        "frequency": 6835
+    }
+]

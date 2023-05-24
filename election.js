@@ -77,26 +77,46 @@ function createBubbleChart(bubbleData, chartName) {
 
 }
 
+
+// Criminal law                                 1123
+// Billionaires                                 1117
+// Pubilc statements (see 38)                    945
+// Life insurance                                621
+// Food and cooking                              619
+// Superannuation                                573
+// Education and training                        531
+// Property market                               463
+
 const data2019 = [
 
-    { date: new Date("2021-03-01"), value: 825, label: "B"}, //Billionaires
-    { date: new Date("2021-04-01"), value: 442, label: "CL"}, //Criminal law
-    { date: new Date("2021-05-01"), value: 373, label: "Super"}, //Superannuation
-    { date: new Date("2021-06-01"), value: 301, label: "PS"}, // Public Statements
-    { date: new Date("2021-07-01"), value: 257, label: "SSGB"}, //Social security and government benefits
-    { date: new Date("2021-08-01"), value: 244, label: "LI"}, //Life insurance
-    { date: new Date("2021-09-01"), value: 233, label: "F&C"}, //Food and cooking
-    { date: new Date("2021-10-01"), value: 190, label: "PM"} //Property market
+    { date: new Date("2021-03-01"), value: 1117, label: "B"}, //Billionaires
+    { date: new Date("2021-04-01"), value: 1123, label: "CL"}, //Criminal law
+    { date: new Date("2021-05-01"), value: 573, label: "Super"}, //Superannuation
+    { date: new Date("2021-06-01"), value: 945, label: "PS"}, // Public Statements
+    { date: new Date("2021-07-01"), value: 531, label: "E&T"}, //Education and training
+    { date: new Date("2021-08-01"), value: 621, label: "LI"}, //Life insurance
+    { date: new Date("2021-09-01"), value: 619, label: "F&C"}, //Food and cooking
+    { date: new Date("2021-10-01"), value: 463, label: "PM"} //Property market
 ];
+
+// Billionaires                                 1459
+// Criminal law                                  888
+// Superannuation                                860
+// Education and training                        661
+// Food and cooking                              581
+// Pubilc statements (see 38)                    545
+// Life insurance                                518
+// Social security and government benefits       430
+
 const data2022 = [
-    {date: new Date("2021-03-01"), value: 583, label: "B"},
- {date: new Date("2021-04-01"), value: 583, label: "CL"},
- {date: new Date("2021-05-01"), value: 560, label: "PS"},
- {date: new Date("2021-06-01"), value: 386, label: "LI"},
- {date: new Date("2021-07-01"), value: 342, label: "E&T"},
- {date: new Date("2021-08-01"), value: 319, label: "Super"},
- {date: new Date("2021-09-01"), value: 313, label: "F&C"},
- {date: new Date("2021-010-01"), value: 237, label: "PM"}
+    {date: new Date("2021-03-01"), value: 1459, label: "B"},
+ {date: new Date("2021-04-01"), value: 888, label: "CL"},
+ {date: new Date("2021-05-01"), value: 545, label: "PS"},
+ {date: new Date("2021-06-01"), value: 518, label: "LI"},
+ {date: new Date("2021-07-01"), value: 661, label: "E&T"},
+ {date: new Date("2021-08-01"), value: 860, label: "Super"},
+ {date: new Date("2021-09-01"), value: 581, label: "F&C"},
+ {date: new Date("2021-010-01"), value: 430, label: "SSGB"}
 ];
 const margin = { top: 20, right: 20, bottom: 30, left: 50 };
 const width = 500 - margin.left - margin.right;
